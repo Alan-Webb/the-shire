@@ -96,9 +96,14 @@ const Navbar = () => {
 								placeholder="Search..."
 								className="relative w-full md:w-32 lg:w-48 border border-gray-300 rounded-full py-1 pl-3 pr-10 mt-6 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-300"
 							/>
-							<FaSearch className="absolute right-10 bottom-5.5 transform hover:scale-120 transition-transform duration-300" />
+							<FaSearch className="absolute right-8 bottom-19.5 transform hover:scale-120 transition-transform duration-300" />
 						</div>
 					</div>
+					{/* Btn */}
+					<button className="w-full sm:w-hidden flex items-center justify-center space-x-2 bg-linear-br from-yellow-300 to-orange-400 px-4 py-2 rounded-full hover:shadow-lg transition-all focus:outline-none cursor-pointer border border-white/60">
+						<FaUserAlt className="w-4 h-4" />
+						<span className="font-semibold uppercase text-sm ">Login</span>
+					</button>
 				</div>
 			</div>
 		</nav>
