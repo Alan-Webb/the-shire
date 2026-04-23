@@ -9,6 +9,8 @@ import {
 	FaUserAlt,
 } from "react-icons/fa";
 import {BiSolidBowlHot} from "react-icons/bi";
+import {GiHamburgerMenu} from "react-icons/gi";
+import {MdClose} from "react-icons/md";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +27,7 @@ const Navbar = () => {
 			{/* LOGO */}
 			<div className="flex items-center space-x-2">
 				<div className="p-2 bg-white/60 rounded-full backdrop-blur-sm">
-					<BiSolidBowlHot className="text-2xl text-black animate-pulse" />
+					<BiSolidBowlHot className="text-xl animate-pulse" />
 				</div>
 				<h1 className="font-extrabold">The Shire</h1>
 			</div>
@@ -35,9 +37,9 @@ const Navbar = () => {
 					<a
 						key={index}
 						href={item.href}
-						className="flex items-center space-x-2 text-black font-semibold hover:text-orange-800 transition-all duration-300 cursor-pointer">
+						className="flex items-center space-x-2 font-semibold hover:text-orange-800 transition-all duration-300 cursor-pointer">
 						<span>{item.icon}</span>
-						<span>{item.text}</span>
+						<span className="text-xs md:text-sm xl:text-lg">{item.text}</span>
 					</a>
 				))}
 			</div>
@@ -58,10 +60,45 @@ const Navbar = () => {
 					<button className="p-2 text-xl bg-white/20 rounded-full hover:bg-white/30  hover:scale-110 transition-all focus:outline-none cursor-pointer border border-gray-600">
 						<FaShoppingCart />
 					</button>
-					<button className="hidden md:flex items-center space-x-2 bg-linear-to-br from-yellow-300 to-orange-400 px-2 sm:px-0.5 lg:px-4 py-2 rounded-full hover:shadow-lg hover:scale-110 transition-all focus:outline-none whitespace-nowrap cursor-pointer">
+					<button className="hidden lg:flex items-center space-x-2 bg-linear-to-br from-yellow-300 to-orange-400 px-2 sm:px-0.5 lg:px-4 py-2 rounded-full hover:shadow-lg hover:scale-110 transition-all focus:outline-none cursor-pointer">
 						<FaUserAlt className="w-4 h-4" />
-						<span className="font-semibold text-white text-sm ">Login</span>
+						<span className="font-semibold uppercase text-sm ">Login</span>
 					</button>
+				</div>
+				{/* MOBILE MENU */}
+				{/* Hamburger Icon */}
+				<button
+					onClick={() => setIsOpen(!isOpen)}
+					aria-label="Toggle Mobile Menu"
+					className="md:hidden p-2 text-2xl hover:text-yellow-300 transition-all focus:outline-none cursor-pointer">
+					{isOpen ? <MdClose /> : <GiHamburgerMenu />}
+				</button>
+			</div>
+			{/* Mobile Navigation */}
+			<div
+				className={`md:hidden absolute top-14 left-0 right-2 bg-linear-to-b from-red-300 to-orange-400 shadow-xl mt-6 mx-4 rounded-xl transition-all duration-300 transform ${isOpen ? "opacity-100 visible scale-110" : "opacity-0 invisible scale-95"}`}>
+				<div className="w-full p-4 space-y-4">
+					{menuItems.map((item, index) => (
+						<a
+							key={index}
+							href={item.href}
+							className="w-full flex items-center space-x-3 text-3xl font-semibold hover:text-orange-800 transition-all duration-300 cursor-pointer">
+							<span>{item.icon}</span>
+							<span>{item.text}</span>
+						</a>
+					))}
+					{/* Mobile Search Bar */}
+					<div className="sm:hidden">
+						<div className="flex items-center bg-white/2o rounded-xl">
+							<input
+								type="text"
+								name="search"
+								placeholder="Search..."
+								className="relative w-full md:w-32 lg:w-48 border border-gray-300 rounded-full py-1 pl-3 pr-10 mt-6 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition duration-300"
+							/>
+							<FaSearch className="absolute right-10 bottom-5.5 transform hover:scale-120 transition-transform duration-300" />
+						</div>
+					</div>
 				</div>
 			</div>
 		</nav>
