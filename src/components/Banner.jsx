@@ -43,7 +43,10 @@ const Banner = () => {
 						<br />
 						<span className="text-orange-600">The Shire</span>
 					</h1>
-					<p></p>
+					<p className="text-md text-gray-600 mb-6">
+						Where second breakfasts are sacred and every meal feels like a
+						journey there and back again
+					</p>
 				</div>
 			</div>
 		</div>
