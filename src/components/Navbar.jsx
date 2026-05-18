@@ -90,7 +90,6 @@ const Navbar = () => {
 						className="flex items-center cursor-pointer text-gray-800 hover:text-pink-700 transition-all duration-300 relative group font-medium text-3xl">
 						<MdPower className="mr-1 lg:mr-2" />
 						Home
-						<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-700 transition-all duration-300 group-hover:w-full"></span>
 					</Link>
 					{/* About */}
 					<Link
@@ -100,7 +99,6 @@ const Navbar = () => {
 						className="flex items-center cursor-pointer text-gray-800 hover:text-pink-700 transition-all duration-300 relative group font-medium text-3xl">
 						<FaCompactDisc className="mr-1 lg:mr-2" />
 						About
-						<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-700 transition-all duration-300 group-hover:w-full"></span>
 					</Link>
 					{/* Services */}
 					<Link
@@ -110,7 +108,16 @@ const Navbar = () => {
 						className="flex items-center cursor-pointer text-gray-800 hover:text-pink-700 transition-all duration-300 relative group font-medium text-3xl">
 						<MdMiscellaneousServices className="mr-1 lg:mr-2" />
 						Services
-						<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-700 transition-all duration-300 group-hover:w-full"></span>
+					</Link>
+					{/* BOOKING BUTTON */}
+					<Link
+						to="contact"
+						spy={true}
+						smooth={true}
+						onClick={() => setIsMenuOpen(false)}
+						className="flex flex-col items-center bg-pink-400 hover:bg-pink-500 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold text-lg cursor-pointer">
+						<FaBarcode className="mr-1 lg:mr-2 text-2xl" />
+						Book Now
 					</Link>
 				</div>
 			)}
