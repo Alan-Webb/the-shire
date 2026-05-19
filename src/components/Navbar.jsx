@@ -7,14 +7,12 @@ import {FiX} from "react-icons/fi";
 import {GiHamburgerMenu} from "react-icons/gi";
 
 const Navbar = () => {
-	const [navShadow, setNavShadow] = useState(false);
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	return (
 		<div className="fixed w-full z-50 transition-all duration-500 ">
 			{/* BG */}
-			<div
-				className={`bg-stone-300/50 backdrop-blur-2xl ${navShadow ? "shadow-xl" : "shadow-md"}`}>
+			<div className="bg-stone-300/50 backdrop-blur-2xl">
 				<nav className="border-b border-red-400/20">
 					<div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between relative">
 						{/* LOGO */}
@@ -81,7 +79,7 @@ const Navbar = () => {
 			</div>
 			{/* MOBILE MENU */}
 			{isMenuOpen && (
-				<div className="flex flex-col items-center w-full md:hidden bg-pink-300/20 p-8 space-y-8 backdrop-blur-lg">
+				<div className="flex flex-col items-center w-full md:hidden bg-stone-300/50 backdrop-blur-2xl space-y-12 py-24">
 					{/* Home */}
 					<Link
 						to="home"
@@ -115,8 +113,8 @@ const Navbar = () => {
 						spy={true}
 						smooth={true}
 						onClick={() => setIsMenuOpen(false)}
-						className="flex flex-col items-center bg-pink-400 hover:bg-pink-500 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold text-lg cursor-pointer">
-						<FaBarcode className="mr-1 lg:mr-2 text-2xl" />
+						className="flex items-center bg-pink-400 hover:bg-pink-500 text-white px-8 py-4 rounded-xl transition-all duration-300 font-semibold text-lg cursor-pointer">
+						<FaBarcode className="mr-4 text-2xl" />
 						Book Now
 					</Link>
 				</div>
