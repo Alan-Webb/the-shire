@@ -1,5 +1,7 @@
 import heroImage from "../assets/heroImage.webp";
 import {GiRobotGolem} from "react-icons/gi";
+import {FaCalendarAlt} from "react-icons/fa";
+import {Link} from "react-scroll";
 
 const Hero = () => {
 	return (
@@ -20,7 +22,18 @@ const Hero = () => {
 					From Glitches to Greatness
 				</h1>
 				{/* DIVIDER */}
-				<div className="w-48 md:w-64 h-1 bg-linear-to-r from-transparent via-lime-300 to-transparent mx-auto my-6 md:my-8 rounded-full"/>
+				<div className="w-48 md:w-64 h-1 bg-linear-to-r from-transparent via-lime-300 to-transparent mx-auto my-6 md:my-8 rounded-full" />
+				{/* Tag Line */}
+				<div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
+					<p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl italic text-amber-100 leading-tight">
+						Your Droid’s Best Version Starts Here
+					</p>
+				</div>
+				{/* BUTTON */}
+				<div className="bg-linear-to-r from-rose-600 to-amber-500 px-6 py-4 md:px-10 md:py-5 rounded-full text-white uppercase font-bold tracking-widest hover:scale-105 transition-transform duration-300 hover-shadow-2xl flex items-center gap-2 md:gap-3 mx-auto border-2 border-amber-200 hover:border-rose-200 group text-sm md:text-base">
+					<FaCalendarAlt className="text-xl md:text-2xl animate-pulse group-hover:animate-none" />
+					<Link></Link>
+				</div>
 			</div>
 		</div>
 	);

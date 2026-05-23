@@ -18,7 +18,7 @@ const Navbar = () => {
 						{/* LOGO */}
 						<div className="flex items-center space-x-2">
 							<img src={Logo} className="w-12 h-12" />
-							<span className="text-3xl md:text-4xl font-bold bg-linear-to-r from-amber-300 via-amber-600 to-amber-800 bg-clip-text text-transparent tracking-tighter shadow-xl cursor-pointer">
+							<span className="text-3xl md:text-4xl font-bold bg-linear-to-r from-amber-300 via-amber-500 to-amber-300 bg-clip-text text-transparent tracking-tighter shadow-xl cursor-pointer">
 								Droid Salon
 							</span>
 						</div>
@@ -62,7 +62,7 @@ const Navbar = () => {
 									to="contact"
 									spy={true}
 									smooth={true}
-									className="flex items-center bg-amber-700 hover:bg-amber-600 text-white px-4 py-2 lg:px-6 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer font-semibold border border-amber-300 text-sm lg:text-base">
+									className="flex items-center bg-amber-600 hover:bg-amber-500 text-white uppercase px-6 py-2 rounded-xl transition-all duration-300 font-semibold text-lg cursor-pointer">
 									<FaBarcode className="mr-1 lg:mr-2" />
 									Book Now
 								</Link>
