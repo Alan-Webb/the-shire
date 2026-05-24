@@ -30,10 +30,12 @@ const Hero = () => {
 					</p>
 				</div>
 				{/* BUTTON */}
-				<div className="bg-linear-to-r from-rose-600 to-amber-500 px-6 py-4 md:px-10 md:py-5 rounded-full text-white uppercase font-bold tracking-widest hover:scale-105 transition-transform duration-300 hover-shadow-2xl flex items-center gap-2 md:gap-3 mx-auto border-2 border-amber-200 hover:border-rose-200 group text-sm md:text-base">
-					<FaCalendarAlt className="text-xl md:text-2xl animate-pulse group-hover:animate-none" />
-					<Link></Link>
-				</div>
+				<button className="w-full bg-linear-to-r from-rose-600 to-amber-500 px-6 py-4 md:px-10 md:py-5 rounded-full text-white uppercase font-bold tracking-widest hover:scale-105 transition-transform duration-300 hover-shadow-2xl flex items-center gap-3 md:gap-12 mx-auto border-2 border-amber-200 hover:border-rose-200 group text-sm md:text-base cursor-pointer">
+					<FaCalendarAlt className="sm:text-xl md:text-2xl animate-pulse group-hover:animate-none" />
+					<Link to="contact" smooth={true}>
+						Book to Upgrade Your Droid and Upgrade Your Day
+					</Link>
+				</button>
 			</div>
 		</div>
 	);
