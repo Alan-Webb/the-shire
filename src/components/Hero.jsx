@@ -23,7 +23,7 @@ const Hero = () => {
 				</h1>
 				{/* DIVIDER */}
 				<div className="w-48 md:w-64 h-1 bg-linear-to-r from-transparent via-lime-300 to-transparent mx-auto my-6 md:my-8 rounded-full" />
-				{/* Tag Line */}
+				{/* TAG LINE */}
 				<div className="space-y-4 md:space-y-6 mb-8 md:mb-12">
 					<p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl italic text-amber-100 leading-tight">
 						Your Droid’s Best Version Starts Here
