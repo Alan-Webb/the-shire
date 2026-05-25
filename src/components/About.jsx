@@ -30,7 +30,15 @@ const features = [
 ];
 
 const About = () => {
-	return <section id="about">About</section>;
+	return (
+		<section
+			id="about"
+			className="py-24 bg-linear-to-r from-rose-200 to-pink-200">
+			<div className="container mx-auto px-4 lg:px-8">
+				<div></div>
+			</div>
+		</section>
+	);
 };
 
 export default About;
