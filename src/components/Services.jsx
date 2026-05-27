@@ -25,7 +25,7 @@ const Services = () => {
 		{
 			id: 1,
 			title: "Servo Joint Calibration",
-			price: "€180",
+			price: "€1800",
 			image: servoCalibration,
 			tags: ["Mobility", "Optimization"],
 			description:
@@ -36,7 +36,7 @@ const Services = () => {
 		{
 			id: 2,
 			title: "Neural Processor Upgrade",
-			price: "€520",
+			price: "€5200",
 			image: neuralProcessor,
 			tags: ["Upgrade", "Performance"],
 			description:
@@ -46,7 +46,7 @@ const Services = () => {
 		{
 			id: 3,
 			title: "Armor Plating Repair",
-			price: "€310",
+			price: "€3100",
 			image: armorRepair,
 			tags: ["Repair", "Exterior"],
 			description: "Restore damaged panels and reinforce structural durability",
@@ -55,7 +55,7 @@ const Services = () => {
 		{
 			id: 4,
 			title: "Optical Sensor Tuning",
-			price: "€160",
+			price: "€1600",
 			image: opticalSensor,
 			tags: ["Sensors", "Calibration"],
 			description:
@@ -65,7 +65,7 @@ const Services = () => {
 		{
 			id: 5,
 			title: "Combat Mode Enhancement",
-			price: "€650",
+			price: "€6500",
 			image: combatUpgrade,
 			tags: ["Advanced", "Upgrade"],
 			description:
@@ -75,7 +75,7 @@ const Services = () => {
 		{
 			id: 6,
 			title: "Custom LED Installation",
-			price: "€170",
+			price: "€1700",
 			image: customLED,
 			tags: ["Customization", "Lighting"],
 			description: "Personalized lighting upgrades with programmable effects",
@@ -84,7 +84,7 @@ const Services = () => {
 		{
 			id: 7,
 			title: "Dexterity Upgrade",
-			price: "€140",
+			price: "€1400",
 			image: dexterityUpgrade,
 			tags: ["Customization", "Audio"],
 			description: "Install premium voice packs and personality enhancements",
@@ -93,7 +93,7 @@ const Services = () => {
 		{
 			id: 8,
 			title: "Firmware Security Update",
-			price: "€95",
+			price: "€950",
 			image: firmwareUpdate,
 			tags: ["Software", "Security"],
 			description: "Patch vulnerabilities and optimize system stability",
