@@ -21,6 +21,7 @@ import firmwareUpdate from "../assets/firmwareUpdate.webp";
 
 const Services = () => {
 	const [showAll, setShowAll] = useState(false);
+
 	const services = [
 		{
 			id: 1,
@@ -100,7 +101,19 @@ const Services = () => {
 			icon: <MdOutlineSecurity className="w-8 h-8 text-cyan-500" />,
 		},
 	];
-	return <div>Services</div>;
+	return (
+		<section
+			id="services"
+			className="py-20 bg-linear-to-b from-[#fceedd] to-[#f9eab8]">
+			<div className="container mx-auto px-4 md:px-6 lg:px-8">
+				<div className="text-center mb-16">
+					<h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-red-600 to-rose-500 bg-clip-text text-transparent mb-4">
+						Our Services
+					</h2>
+				</div>
+			</div>
+		</section>
+	);
 };
 
 export default Services;

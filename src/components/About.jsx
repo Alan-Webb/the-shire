@@ -11,25 +11,23 @@ const features = [
 	{
 		icon: <GiLightningSpanner className="w-8 h-8" />,
 		title: "Ability Upgrades",
-		description:
-			"Faster processors, expanded memory, enhanced mobility systems.",
+		description: "Faster processors, expanded memory, enhanced mobility",
 	},
 	{
 		icon: <MdSensors className="w-8 h-8" />,
 		title: "Sense Calibration",
 		description:
-			"Fine-tuning visual, audio and navigation for optimum accuracy.",
+			"Fine-tuning visual, audio and navigation for optimum accuracy",
 	},
 	{
 		icon: <MdOutlineRecordVoiceOver className="w-8 h-8" />,
 		title: "Charisma Tuning",
-		description: "Refine speech patterns or recalibrate personality modules.",
+		description: "Refine speech patterns or recalibrate personality modules",
 	},
 	{
 		icon: <MdOutlineSecurity className="w-8 h-8" />,
 		title: "Security Patching",
-		description:
-			"Firmware upgrades, bug fixes, firewall protection, and malware removal",
+		description: "Firmware upgrades, bug fixes, firewall protection",
 	},
 ];
 
