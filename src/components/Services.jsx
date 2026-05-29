@@ -132,8 +132,32 @@ const Services = () => {
 										<img
 											src={service.image}
 											alt={service.title}
-											className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110"
+											className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+											loading="lazy"
 										/>
+										{/* Price */}
+										<div className="absolute bottom-0 left-0 right-0 bg-linear-to-t from-black/70 to-transparent p-4">
+											<span className="bg-amber-500/90 text-white px-5 py-2 rounded-full text-sm font-bold shadow-lg">
+												{service.price}
+											</span>
+										</div>
+									</div>
+									{/* Tags */}
+									<div className="p-6">
+										<div className="flex flex-wrap gap-2 mb-3">
+											{service.tags.map((tag) => (
+												<span className="bg-amber-50 text-amber-700 px-3 py-1 rounded-full text-sm font-medium border border-amber-200 hover:border-amber-100 transition-colors">
+													{tag}
+												</span>
+											))}
+										</div>
+										{/* Title & Description*/}
+										<h3 className="text-xl text-center mb-2 text-amber-800">
+											{service.title}
+										</h3>
+										<p className="text-amber-600 leading-relaxed font-medium text-center">
+											{service.description}
+										</p>
 									</div>
 								</div>
 							))}
