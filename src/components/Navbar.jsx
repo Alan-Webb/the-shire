@@ -30,30 +30,30 @@ const Navbar = () => {
 								to="home"
 								spy={true}
 								smooth={true}
-								className="flex items-center cursor-pointer uppercase hover:text-gray-600 transition-all duration-300 relative group font-medium text-base lg:text-lg">
+								className="flex items-center cursor-pointer uppercase hover:text-amber-800 transition-all duration-300 relative group font-medium text-base lg:text-lg">
 								<MdHomeFilled className="mr-1 lg:mr-2" />
 								Home
-								<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-700 transition-all duration-300 group-hover:w-full"></span>
+								<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
 							</Link>
 							{/* About */}
 							<Link
 								to="about"
 								spy={true}
 								smooth={true}
-								className="flex items-center cursor-pointer uppercase hover:text-gray-600 transition-all duration-300 relative group font-medium text-base lg:text-lg">
+								className="flex items-center cursor-pointer uppercase hover:text-amber-800 transition-all duration-300 relative group font-medium text-base lg:text-lg">
 								<FaInfoCircle className="mr-1 lg:mr-2" />
 								About
-								<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-700 transition-all duration-300 group-hover:w-full"></span>
+								<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
 							</Link>
 							{/* Services */}
 							<Link
 								to="services"
 								spy={true}
 								smooth={true}
-								className="flex items-center cursor-pointer uppercase hover:text-gray-600 transition-all duration-300 relative group font-medium text-base lg:text-lg">
+								className="flex items-center cursor-pointer uppercase hover:text-amber-800 transition-all duration-300 relative group font-medium text-base lg:text-lg">
 								<MdMiscellaneousServices className="mr-1 lg:mr-2" />
 								Services
-								<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-pink-700 transition-all duration-300 group-hover:w-full"></span>
+								<span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
 							</Link>
 						</div>
 						{/* BOOKING BUTTON */}

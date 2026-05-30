@@ -54,7 +54,7 @@ const About = () => {
 						</div>
 					</div>
 					{/* CONTENT SECTION */}
-					<div className="space-y-8">
+					<div className="space-y-8 pt-48">
 						<div className="inline-block">
 							<div className="flex items-center space-x-3 bg-rose-100 px-4 py-2 rounded-full">
 								<IoMedalSharp className="text-rose-400" />
