@@ -18,30 +18,6 @@ const Contact = () => {
 	const [date, setDate] = useState("");
 	const [time, setTime] = useState("");
 
-	const validateForm = useCallback(() => {
-		const errors = {};
-		if (!name.trim()) errors.name = "Name is required.";
-		if (!phone.trim()) errors.phone = "Phone number is required.";
-		else if (!/^\d{10}$/.test(phone))
-			errors.phone = "Phone number must be exactly 10 digits.";
-		if (selectedServices.length === 0)
-			errors.services = "Please select at least one service.";
-		if (!date) errors.date = "Date is required.";
-		if (!time) errors.time = "Time is required.";
-		return errors;
-	}, [name, phone, selectedServices, date, time]);
-
-	const handleSubmit = useCallback((e) => {
-		e.preventDefault();
-		const validateErrors = validateForm();
-		if (Object.keys(validateErrors).length) {
-			setErrors(validateErrors);
-			return;
-		}
-		setErrors({});
-		setIsSubmitting(true);
-	});
-
 	const services = useMemo(
 		() => [
 			"Servo Joint Calibration",
@@ -57,6 +33,32 @@ const Contact = () => {
 		],
 		[],
 	);
+
+	const validateForm = useCallback(() => {
+		const errors = {};
+		if (!name.trim()) errors.name = "Name is required.";
+		if (!phone.trim()) errors.phone = "Phone number is required.";
+		else if (!/^\d{10}$/.test(phone))
+			errors.phone = "Phone number must be exactly 10 digits.";
+		if (selectedServices.length === 0)
+			errors.services = "Please select at least one service.";
+		if (!date) errors.date = "Date is required.";
+		if (!time) errors.time = "Time is required.";
+		return errors;
+	}, [name, phone, selectedServices, date, time]);
+
+	const toggleServices = useCallback((service) => {});
+
+	const handleSubmit = useCallback((e) => {
+		e.preventDefault();
+		const validateErrors = validateForm();
+		if (Object.keys(validateErrors).length) {
+			setErrors(validateErrors);
+			return;
+		}
+		setErrors({});
+		setIsSubmitting(true);
+	});
 
 	return (
 		<section
@@ -115,6 +117,26 @@ const Contact = () => {
 									{errors.phone}
 								</p>
 							)}
+						</div>
+						{/* SERVICES */}
+						<div className="md:col-span-2">
+							<label className="block text-yellow-700 text-lg font-medium mb-3 sm:mb-4">
+								Select Service
+							</label>
+							{/* Services Tags */}
+							<div className="flex flex-wrap gap-2 mb-4">
+								{selectedServices.localeCompare((service) => (
+									<div
+										key={service}
+										className="flex items-center bg-yellow-100 rounded-full px-4 py-2 text-sm text-yellow-700 font-medium hover:bg-yellow-200 transition-all">
+										<span>{service}</span>
+										<button
+											type="button"
+											onClick={() => toggleServices()}
+											className=""></button>
+									</div>
+								))}
+							</div>
 						</div>
 					</div>
 				</form>
